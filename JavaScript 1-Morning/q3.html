@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkSameDigit(n)
+        {
+            let p=n%10;
+            while(n)
+            {
+                    if(n%10!=p)
+                    return false;
+                    n=Math.floor(n/10);
+            }
+            return true;
+
+        }
+        console.log(checkSameDigit(121));//false
+        console.log(checkSameDigit(111));//true
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       function myfun(name){
+        var len=name.length;
+        var character="";
+       for(let i=0;i<len;i++)
+       {
+            
+          if(name[i]==name[i].toUpperCase())
+          {   
+              character+=name[i].toLowerCase();
+          }
+          else{
+            character+=name[i].toUpperCase();
+          }
+       }
+       return character;
+    }
+       console.log(myfun("AccOlite"));//aCCoLITE
+   </script> 
+</body>
+</html>

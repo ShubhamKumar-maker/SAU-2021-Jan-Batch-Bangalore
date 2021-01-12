@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+<script>
+function dpf(n) {
+  function isPrime(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++)
+    {
+      if (n % i === 0) return false;
+    }
+    return true;
+  }
+  const ans = [];
+  for (let i = 2; i <= n; i++)
+  {
+    while (isPrime(i) && n % i === 0) 
+    {
+      if (!ans.includes(i)) ans.push(i);
+      n /= i;
+    }
+  }
+  return ans;
+}
+let result=dpf(100);
+var x;
+for(x in result){
+console.log(result[x]); // 2 5
+}
+
+
+
+</script>
+
+</body>
+</html>

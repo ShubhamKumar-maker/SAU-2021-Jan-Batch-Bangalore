@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>      
+    
+        <lable id="name" value="name">Name</lable>
+        <input type="text" id="vname"><br>
+        <lable>Gender:</lable>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+
+        <label for="cars">Choose a car:</label>
+
+        <select name="cars" id="cars">
+        <option></option>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        </select>
+        <br>
+        <label>Email:</label>
+        <input type="text" id="email"><br>
+        <input type="submit" onclick="myform()">
+    
+
+    <script>
+       function myform(){
+
+               var fname=document.getElementById('vname').value;
+               var radios=document.getElementsByName('gender');
+               var selectb=document.getElementById('cars').value;
+               var email=document.getElementById('email').value;
+               var formValid = false;
+
+                    var i = 0;
+                    while (!formValid && i < radios.length) {
+                        if (radios[i].checked) {formValid = true;
+                        rvalue=radios[i].value;}
+                        i++;        
+                    }
+               if(fname==""){
+               alert("enter name");
+               return false;
+                     }
+               else if(selectb=="")
+               {
+                alert("select something");
+               return false;
+               }
+               else if(!formValid) {
+                   alert("check something");
+               }
+               else if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)==false)
+               {
+                        alert("enter correct email address");
+               }
+               else{
+                   var result={};
+                   result['name']=fname;
+                   result['gender']=rvalue;
+                   result['car']=selectb;
+                   result['email']=email;
+                   var myData = JSON.stringify(result);
+                   console.log(myData);
+               }
+
+        }
+    </script>
+</body>
+</html>
