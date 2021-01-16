@@ -1,0 +1,19 @@
+<div><ul *ngFor="let p of posts;let K=index" >
+    <li *ngIf="K< 20">
+   <span> {{p.id}} </span>
+   <span> {{p.userId}} </span>
+   <span> {{p.title}} </span>
+   
+    <button (click)="getDetailData(p.id);myfun()">Detail</button>
+    <hr>
+    
+</li>
+</ul>
+
+    
+    <app-firstcomponent-child *ngIf="display" [detail]='destailp'></app-firstcomponent-child>
+
+ 
+
+
+</div>

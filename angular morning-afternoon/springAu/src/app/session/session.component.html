@@ -1,0 +1,39 @@
+<div>
+
+<label>Enter Name</label>
+  <input type="text" #addName placeholder="enter name"/>
+  <label>Enter Trainer</label>
+  <input type="text" #addTrainer placeholder="enter trainer"/>
+  <label>Enter Date</label>
+  <input type="date"  #addDate placeholder="enter Date"/>
+  <br>
+   <button (click)="addsession(addName.value,addTrainer.value,addDate.value)">Add</button>
+<ul>
+    
+    <li *ngFor="let session of sessions;let i =index" >
+       
+      <span >{{session.name}} -
+      </span> 
+       
+      <button (click)="editSession(session,addName.value,addTrainer.value,addDate.value)">Edit</button>
+      <button (click)="deleteSession(session)">Delete</button>
+      <button (click)="showDetail(session)">Detail</button>
+      
+    </li>
+  </ul>
+
+  <div id="comp-render" *ngIf="display">
+    <hr>
+    <app-session-list [firstName]="firstName"></app-session-list>
+</div>
+  
+  
+  
+
+
+
+
+
+
+</div>
+<!-- {{i}}--{{session.joined | date:'fullDate'}} -->

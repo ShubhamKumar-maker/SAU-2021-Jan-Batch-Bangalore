@@ -1,0 +1,16 @@
+.selected{
+    background-color:green;
+}
+ul{
+    list-style: none;
+}
+li{
+    cursor:pointer;
+    
+}
+#comp-render{
+    display: block;
+}
+button,label{
+    margin:3px 3px;
+}
