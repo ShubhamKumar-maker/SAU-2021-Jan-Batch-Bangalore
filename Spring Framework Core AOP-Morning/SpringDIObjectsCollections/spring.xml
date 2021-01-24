@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+  <bean id="triangle" class="com.au.spring.Triangle">
+   <!-- /////////////////////////// using set//////////////////////////////////////////////////// -->
+     <property name="spoints">
+    <set>
+    <ref bean="SpointA"/>
+     <ref bean="SpointB"/>
+      <ref bean="SpointC"/>
+    
+    </set>
+    
+    </property>
+  <!-- /////////////////////////// using set//////////////////////////////////////////////////// -->   
+  
+  
+  
+  
+  
+   
+    
+     <!-- /////////////////////////// using set//////////////////////////////////////////////////// -->
+     <property name="SpointA" ref="SpointA"/>
+     <property name="SpointB" ref="SpointB"/>
+      <property name="SpointC" ref="SpointC"/>
+    
+     <!-- /////////////////////////// using set//////////////////////////////////////////////////// -->
+    
+    
+    
+  </bean>
+  
+  
+  
+  
+  <!-- /////////////////////////// using set//////////////////////////////////////////////////// -->
+   <bean id="SpointA" class="com.au.spring.SetOfPoints">
+     <property name="x" value="2"/>
+     <property name="y" value="3"/>
+  </bean>
+  
+  <bean id="SpointB" class="com.au.spring.SetOfPoints">
+       <property name="x" value="4"/>
+       <property name="y" value="5"/>
+  </bean>
+  <bean id="SpointC" class="com.au.spring.SetOfPoints">
+        <property name="x" value="6"/>
+        <property name="y" value="7"/>
+  </bean>
+   <!-- /////////////////////////// End using set//////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////  using Map//////////////////////////////////////////////////// -->
+  <bean  id="triangleMap" class="com.au.spring.UsingMap">
+  
+   <property name = "nameMap">
+         <map>
+            <entry key = "1" value = "Isosceles"/>
+            <entry key = "2" value = "Equilateral"/>
+            <entry key = "3" value = "Scalene"/>
+            <entry key = "4" value = "Right"/>
+         </map>
+      </property>
+  
+  
+  
+  </bean>
+  
+  
+  
+  
+  
+</beans>
