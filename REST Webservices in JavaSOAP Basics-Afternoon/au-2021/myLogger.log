@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-01-30T17:37:24.052124400Z</date>
+  <millis>1612028244052</millis>
+  <nanos>124400</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>com.namegenerator.au2021.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>My first log</message>
+</record>
+<record>
+  <date>2021-01-30T17:37:24.070400100Z</date>
+  <millis>1612028244070</millis>
+  <nanos>400100</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>com.namegenerator.au2021.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>My second log</message>
+</record>
+<record>
+  <date>2021-01-30T17:37:24.071805400Z</date>
+  <millis>1612028244071</millis>
+  <nanos>805400</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>com.namegenerator.au2021.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>A fake error occurred mate!</message>
+  <exception>
+    <message>java.io.IOException: Fake error message</message>
+    <frame>
+      <class>com.namegenerator.au2021.Logging</class>
+      <method>main</method>
+      <line>60</line>
+    </frame>
+  </exception>
+</record>
+</log>
